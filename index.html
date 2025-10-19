@@ -13,6 +13,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
+<script src="app.js"></script>
 
   <style>
     body {
@@ -118,19 +119,16 @@
   <!-- Courses Section -->
   <section id="courses" class="courses container my-5">
     <h2 class="mb-4"><i class="fa-solid fa-book-open me-2"></i>Popular Courses</h2>
-    <div class="row g-4">
+    <div id="courses-container" class="row g-4">
+  <!-- Course cards will be injected here -->
 
-      <div class="col-md-4">
-        <div class="card course-card shadow-sm h-100">
-          <img src="https://www.laptopnavigator.com/wp-content/uploads/2024/02/best-laptop-for-python-programming.jpeg" class="card-img-top" alt="Python course" />
-          <div class="card-body">
-            <h5 class="card-title">Python Programming</h5>
-            <p class="card-text"><i class="fa-solid fa-user me-1"></i>John Doe</p>
-            <p class="card-text"><i class="fa-solid fa-star text-warning me-1"></i>4.8 | 8k Students</p>
-            <a href="#" class="btn btn-primary">Enroll</a>
-          </div>
-        </div>
-      </div>
+      <section id="courses" class="courses container my-5">
+  <h2 class="mb-4"><i class="fa-solid fa-book-open me-2"></i>Popular Courses</h2>
+  <div id="courses-container" class="row g-4">
+    <!-- Course cards will be injected here -->
+  </div>
+</section>
+
 
       <div class="col-md-4">
         <div class="card course-card shadow-sm h-100">
