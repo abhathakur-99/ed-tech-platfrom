@@ -1,1 +1,1 @@
-# ed-tech-platfrom
+# ed-tech-platform
