@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduLearn | Course Details</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 70px;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      z-index: 1030;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: rgba(0,0,0,0.4);
+      border-radius: 15px;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    img.course-image {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      margin-bottom: 1.5rem;
+    }
+    .course-info p {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .btn-enroll-now {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      padding: 0.8rem 3rem;
+      border-radius: 50px;
+      background: #0072ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,114,255,0.4);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-enroll-now:hover {
+      background-color: #005ac1;
+      transform: translateY(-3px);
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark shadow">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="https://e7.pngegg.com/pngimages/280/670/png-clipart-education-learning-stationery-elements-bachelor-cap-education-thumbnail.png" alt="EduLearn Logo" />
+        EduLearn
+      </a>
+    </div>
+  </nav>
+
+  <main class="wrapper mt-5">
+    <h1 id="courseTitle">Loading...</h1>
+    <img src="" alt="Course Image" class="course-image" id="courseImage" />
+    <div class="course-info" id="courseDescription"></div>
+    <a id="enrollButton" class="btn-enroll-now" href="#">Enroll Now</a>
+  </main>
+
+  <script>
+    const courses = {
+      "Python Programming": {
+        description: "Beginner to expert Python coding with projects.",
+        mentor: "John Doe",
+        duration: "8 weeks",
+        image: "https://img.freepik.com/premium-photo/python-programming-languageman-using-laptop-computer-with-python-programming-icon-virtual-screen-application-web-development-concept_1296497-827.jpg"
+      },
+      "Web Development Mastery": {
+        description: "Learn full stack web development essentials.",
+        mentor: "Sarah Lee",
+        duration: "10 weeks",
+        image: "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F5ct9nhbw6gdpb8dh0yy1.png"
+      },
+      "UI/UX Design Fundamentals": {
+        description: "Design intuitive user interfaces & experiences.",
+        mentor: "Rahul Mehta",
+        duration: "6 weeks",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+      },
+      "Digital Marketing": {
+        description: "Master SEO, PPC, and social media marketing.",
+        mentor: "Emily Brown",
+        duration: "8 weeks",
+        image: "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?auto=format&fit=crop&w=800&q=80"
+      },
+      "Artificial Intelligence": {
+        description: "Explore AI applications and machine learning.",
+        mentor: "Dr. Alex Li",
+        duration: "12 weeks",
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+      },
+      "Data Science Bootcamp": {
+        description: "Data analysis and visualization with Python & R.",
+        mentor: "Priya Singh",
+        duration: "10 weeks",
+        image: "https://engineering.nyu.edu/sites/default/files/styles/content_header_default_1x/public/2022-02/Data%20Science%20Bootcamp%20%281%29.jpg?h=2f83cd36&itok=qIg5KFwK"
+      },
+      "Cybersecurity Essentials": {
+        description: "Learn to secure infrastructure & data.",
+        mentor: "Michael Carter",
+        duration: "6 weeks",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnOfFdSXsW4YT0cLRTg9TQPHQPJWX13OtA6Q&s"
+      },
+      "Machine Learning": {
+        description: "Understand predictive modeling and neural nets.",
+        mentor: "Zara Ali",
+        duration: "9 weeks",
+        image: "https://media.geeksforgeeks.org/wp-content/uploads/20230808130011/Machine-Learning-Algorithms1-(1).webp"
+      },
+      "Cloud Computing": {
+        description: "Learn AWS, Azure, and GCP fundamentals.",
+        mentor: "David Kim",
+        duration: "8 weeks",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+      },
+      "Graphic Design": {
+        description: "Learn digital design tools and concepts.",
+        mentor: "Olivia Garcia",
+        duration: "6 weeks",
+        image: "https://www.rmcad.edu/wp-content/uploads/2024/04/shutterstock_434383288.jpg"
+      },
+      "Photography Masterclass": {
+        description: "Take amazing photographs and shoot like a pro.",
+        mentor: "Robert Lane",
+        duration: "5 weeks",
+        image: "https://courses.iid.org.in/public//uploads/media_manager/744.jpg"
+      },
+      "Finance for Beginners": {
+        description: "Understand money management and investing.",
+        mentor: "Lisa Ray",
+        duration: "4 weeks",
+        image: "https://img.freepik.com/free-vector/finance-financial-performance-concept-illustration_53876-40450.jpg"
+      },
+      "Content Writing": {
+        description: "Write clear, engaging, and persuasive content.",
+        mentor: "Karan Bhatt",
+        duration: "5 weeks",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+      },
+      "Public Speaking": {
+        description: "Develop confidence and master your speaking skills.",
+        mentor: "Grace Allen",
+        duration: "4 weeks",
+        image: "https://www.herzing.edu/sites/default/files/styles/fp_960_480/public/images/blog/istock-614138202.jpg.webp"
+      },
+      "Project Management": {
+        description: "Plan, organize, and oversee projects successfully.",
+        mentor: "Sam Woods",
+        duration: "6 weeks",
+        image: "https://pm360consulting.ie/wp-content/uploads/2024/03/diploma-of-project-management-2x.jpg"
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseName = urlParams.get('course') || 'Course';
+    const course = courses[courseName];
+
+    document.title = `EduLearn | ${courseName}`;
+    const titleEl = document.getElementById('courseTitle');
+    const descEl = document.getElementById('courseDescription');
+    const imgEl = document.getElementById('courseImage');
+    const enrollBtn = document.getElementById('enrollButton');
+
+    titleEl.textContent = courseName;
+
+    if(course) {
+      descEl.innerHTML = `
+        <p><strong>Description:</strong> ${course.description}</p>
+        <p><strong>Mentor:</strong> ${course.mentor}</p>
+        <p><strong>Duration:</strong> ${course.duration}</p>
+      `;
+      imgEl.removeAttribute('style');
+      imgEl.src = course.image;
+      imgEl.alt = courseName;
+      enrollBtn.href = `detail-form.html?course=${encodeURIComponent(courseName)}`;
+      enrollBtn.style.display = 'inline-block';
+    } else {
+      descEl.innerHTML = "<p>Course information not found.</p>";
+      imgEl.style.display = 'none';
+      enrollBtn.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

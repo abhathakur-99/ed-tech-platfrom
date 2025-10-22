@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduLearn | Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(rgba(30, 35, 57, 0.85), rgba(30, 35, 57, 0.85)),
+      url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1470&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding-top: 80px;
+      position: relative;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    h2.section-title {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: #c5d2ff;
+      text-shadow: 0 0 10px #10327d;
+    }
+    .btn-enroll {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      font-weight: 700;
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 0 0 0.375rem 0.375rem;
+      box-shadow: 0 4px 10px rgba(0, 114, 255, 0.6);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+    .btn-enroll:hover,
+    .btn-enroll:focus {
+      background: linear-gradient(45deg, #005ac1, #002f7e);
+      box-shadow: 0 0 15px rgba(0, 90, 193, 0.9);
+      transform: translateY(-3px);
+      outline: none;
+      color: white;
+    }
+    .card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      color: white;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .card:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: black;
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="https://e7.pngegg.com/pngimages/280/670/png-clipart-education-learning-stationery-elements-bachelor-cap-education-thumbnail.png" alt="EduLearn Logo" />
+        EduLearn
+      </a>
+    </div>
+  </nav>
+
+  <section class="container my-5">
+    <h2 class="section-title"><i class="fa-solid fa-code me-2"></i>Explore Our Coding Courses</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://img.freepik.com/premium-photo/python-programming-languageman-using-laptop-computer-with-python-programming-icon-virtual-screen-application-web-development-concept_1296497-827.jpg" alt="Python Programming" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Python Programming</h5>
+            <p class="card-text">Beginner to expert Python coding with projects.</p>
+          </div>
+          <a href="course-detail.html?course=Python%20Programming" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F5ct9nhbw6gdpb8dh0yy1.png" alt="Web Development" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Web Development Mastery</h5>
+            <p class="card-text">Learn full stack web development essentials.</p>
+          </div>
+          <a href="course-detail.html?course=Web%20Development%20Mastery" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">UI/UX Design Fundamentals</h5>
+            <p class="card-text">Design intuitive user interfaces & experiences.</p>
+          </div>
+          <a href="course-detail.html?course=UI/UX%20Design%20Fundamentals" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?auto=format&fit=crop&w=800&q=80" alt="Digital Marketing" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Digital Marketing</h5>
+            <p class="card-text">Master SEO, PPC, and social media marketing.</p>
+          </div>
+          <a href="course-detail.html?course=Digital%20Marketing" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Artificial Intelligence</h5>
+            <p class="card-text">Explore AI applications and machine learning.</p>
+          </div>
+          <a href="course-detail.html?course=Artificial%20Intelligence" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://engineering.nyu.edu/sites/default/files/styles/content_header_default_1x/public/2022-02/Data%20Science%20Bootcamp%20%281%29.jpg?h=2f83cd36&itok=qIg5KFwK" alt="Data Science" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Data Science Bootcamp</h5>
+            <p class="card-text">Data analysis and visualization with Python & R.</p>
+          </div>
+          <a href="course-detail.html?course=Data%20Science%20Bootcamp" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnOfFdSXsW4YT0cLRTg9TQPHQPJWX13OtA6Q&s" alt="Cybersecurity" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Cybersecurity Essentials</h5>
+            <p class="card-text">Learn to secure infrastructure & data.</p>
+          </div>
+          <a href="course-detail.html?course=Cybersecurity%20Essentials" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230808130011/Machine-Learning-Algorithms1-(1).webp" alt="Machine Learning" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Machine Learning</h5>
+            <p class="card-text">Understand predictive modeling and neural nets.</p>
+          </div>
+          <a href="course-detail.html?course=Machine%20Learning" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Cloud Computing" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Cloud Computing</h5>
+            <p class="card-text">Learn AWS, Azure, and GCP fundamentals.</p>
+          </div>
+          <a href="course-detail.html?course=Cloud%20Computing" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://www.rmcad.edu/wp-content/uploads/2024/04/shutterstock_434383288.jpg" alt="Graphic Design" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Graphic Design</h5>
+            <p class="card-text">Learn digital design tools and concepts.</p>
+          </div>
+          <a href="course-detail.html?course=Graphic%20Design" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://courses.iid.org.in/public//uploads/media_manager/744.jpg" alt="Photography" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Photography Masterclass</h5>
+            <p class="card-text">Take amazing photographs and shoot like a pro.</p>
+          </div>
+          <a href="course-detail.html?course=Photography%20Masterclass" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://img.freepik.com/free-vector/finance-financial-performance-concept-illustration_53876-40450.jpg" alt="Finance" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Finance for Beginners</h5>
+            <p class="card-text">Understand money management and investing.</p>
+          </div>
+          <a href="course-detail.html?course=Finance%20for%20Beginners" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Content Writing" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Content Writing</h5>
+            <p class="card-text">Write clear, engaging, and persuasive content.</p>
+          </div>
+          <a href="course-detail.html?course=Content%20Writing" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://www.herzing.edu/sites/default/files/styles/fp_960_480/public/images/blog/istock-614138202.jpg.webp?itok=7Rl8Cytl" alt="Public Speaking" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Public Speaking</h5>
+            <p class="card-text">Develop confidence and master your speaking skills.</p>
+          </div>
+          <a href="course-detail.html?course=Public%20Speaking" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="https://pm360consulting.ie/wp-content/uploads/2024/03/diploma-of-project-management-2x.jpg" alt="Project Management" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Project Management</h5>
+            <p class="card-text">Plan, organize, and oversee projects successfully.</p>
+          </div>
+          <a href="course-detail.html?course=Project%20Management" class="btn-enroll">Enroll</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
