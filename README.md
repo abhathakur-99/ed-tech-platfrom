@@ -14,3 +14,6 @@ An enrollment confirmation page providing clear feedback to users
 
 Whether you want to learn Python, Web Development, AI, or Project Management, EduLearn offers an aesthetically pleasing and engaging experience. This project can be used as a starter template for your own online course platform or learning management system.
 
+
+Here is the link of the working website:
+https://abhathakur-99.github.io/ed-tech-platfrom/
